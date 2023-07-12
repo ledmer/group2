@@ -1,5 +1,6 @@
 from gasp import *
 import time
+
 def stop_smiling(x, y):
     n = 30
     while n < 90:
@@ -9,6 +10,11 @@ def stop_smiling(x, y):
         Arc((320 + x, 240 + y), 80, 180+n, 360-n, thickness = 4)
         Line((300+x,220+y),(320+x,250+y),thickness = 4)
         Line((300+x,220+y),(340+x,220+y),thickness = 4)
+        
+        Line((360+x,340+y),(320+x,380+y),thickness = 4)
+        Line((280+x,340+y),(321+x,380+y),thickness = 4)
+        Line((280+x,340+y),(360+x,340+y),thickness = 4)
+        
         n += 15
         time.sleep(1)
 
@@ -24,8 +30,12 @@ def serious_f(x, y):
         Line((290 + n + x, 200 + y), (350 + n + x, 200 + y),thickness = 4)
         Line((300+x,220+y),(320+x,250+y),thickness = 4)
         Line((300+x,220+y),(340+x,220+y),thickness = 4)
+        Line((360+x,340+y),(320+x,380+y),thickness = 4)
+        Line((280+x,340+y),(321+x,380+y),thickness = 4)
+        Line((280+x,340+y),(360+x,340+y),thickness = 4)
         n += 25
         time.sleep(0.9)
+
 def move(i):
     if i == 0:
         return 0,0
@@ -58,6 +68,5 @@ while not n == "x":
     serious_f(x, y)
     clear_screen()
     i += 1
-
 
 end_graphics()
